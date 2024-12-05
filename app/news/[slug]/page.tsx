@@ -27,6 +27,7 @@ import Loading from '@/components/ui/Loading';
 import { useAuth } from '@clerk/nextjs';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import { SocialShare } from '@/components/ui/SocialShare';
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const router = useRouter();
@@ -191,7 +192,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               </div>
             </div>
 
-            <div className='flex items-center gap-4 mb-6 hidden'>
+            <div className='items-center gap-4 mb-6 hidden'>
               <Avatar
                 className='w-8 h-8'
                 src={article.author.avatar}
@@ -210,6 +211,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 className=''
                 dangerouslySetInnerHTML={{ __html: article.text }}
               />
+            </div>
+            <div className='py-12'>
+              <SocialShare />
             </div>
           </CardBody>
         </Card>
