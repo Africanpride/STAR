@@ -23,19 +23,16 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { format } from 'date-fns';
-import Loading from '@/components/ui/Loading';
 import { useAuth } from '@clerk/nextjs';
 import toast from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
+import Loading from '@/components/ui/Loading';
 import { SocialShare } from '@/components/ui/SocialShare';
+import router from 'next/router';
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const router = useRouter();
 
   const { isLoaded, userId } = useAuth();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [backdrop, setBackdrop] = useState('opaque');
-
   const [article, setArticle] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
