@@ -97,7 +97,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   return (
     <div className='p-4'>
       <div className='container mx-auto md:p-4'>
-        <Card className='max-w-4xl mx-auto rounded-none md:rounded-xl shadow-sm '>
+        <Card className='max-w-3xl mx-auto rounded-none md:rounded-xl shadow-sm  '>
           <CardHeader className='p-0 relative  '>
             <Chip
               className='px-2 rounded-none rounded-bl-2xl text-white bg-lime-600 font-bebas absolute z-50 inset-y-0 right-0'
@@ -212,7 +212,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 dangerouslySetInnerHTML={{ __html: article.text }}
               />
             </div>
-            <div className='py-12'>
+            <div className='py-12 overflow-x-hidden'>
               <SocialShare />
             </div>
           </CardBody>

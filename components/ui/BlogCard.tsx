@@ -30,17 +30,17 @@ const BlogCard: React.FC<BlogCardProps> = ({
       className=" group flex h-full flex-col rounded-xl border border-gray-200 bg-white p-3 transition duration-300 hover:border-transparent hover:shadow-lg focus:border-transparent focus:shadow-lg focus:outline-none dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40 dark:focus:border-transparent dark:focus:shadow-black/40"
       href={url}
     >
-      <div className="aspect-w-16 aspect-h-11">
+      <div className="h-auto md:h-[150px] aspect-w-16 aspect-h-11">
         <Image
           priority
           alt={imageAlt}
-          className="w-full rounded-xl object-cover"
+          className="w-full  rounded-xl object-cover"
           height={800}
           src={imageSrc}
           width={800}
           style={{
             height: '100%',
-            width: '100%',
+            width: '100vw',
           }}
         />
       </div>
