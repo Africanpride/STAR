@@ -87,5 +87,5 @@ export default {
     },
   },
   darkMode: ['class', 'class'],
-  plugins: [nextui(), tailwindcssAnimate()],
+  plugins: [nextui(), tailwindcssAnimate],
 };
