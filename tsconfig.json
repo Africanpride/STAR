@@ -22,11 +22,19 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/fonts": ["./styles/fonts"],
-      "@functions*": ["./utils/functions/*"]
-
+      "@/config/fonts": ["./config/fonts"],
+      "@/config/site": ["./config/site"],
+      "@/components/ui/*": ["./components/ui/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/user.ts", "app/api/webhooks/clerk/route.js", "app/gsap/page.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "lib/user.ts",
+    "app/api/webhooks/clerk/route.js",
+    "app/gsap/page.js"
+  ],
   "exclude": ["node_modules"]
 }
